@@ -1,0 +1,24 @@
+{
+	"extends": "@skyra/eslint-config",
+	"rules": {
+        "max-len": "off",
+        "no-confusing-arrow": "off",
+        "no-eq-null": "off",
+        "no-negated-condition": "off",
+        "no-undefined": "off",
+        "linebreak-style": "off",
+        "no-shadow": "off",
+		"no-warning-comments": 0,
+		"no-process-env": 0,
+		"no-inline-comments": 0,
+		"@typescript-eslint/naming-convention": 0,
+        "prefer-destructuring": [
+            "off"
+        ],
+        "quotes": [
+            "error",
+            "single"
+        ],
+        "quote-props": "off"
+    }
+  }
