@@ -15,5 +15,5 @@
    <img src="https://top.gg/api/widget/761469922563063818.svg">
 </a>
 <br>
-<script src="https://discordbotlist.com/widget/index.js" async></script>
+<script src="https://discordbotlist.com/widget/index.js"></script>
 <dbl-widget bot-id="bot-mito"></dbl-widget>
