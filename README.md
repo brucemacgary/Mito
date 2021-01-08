@@ -12,6 +12,8 @@
 ## Acknowledgement
 - Library - [discord.js](https://discord.js.org/)
 - Framework - [Discord Akairo](https://discord-akairo.github.io/)
+- Licence - [MIT]()
+- Hosting - [Azure](https://portal.azure.com)
 
 ## Vote Mito on Bot lists
 <div align="center">
