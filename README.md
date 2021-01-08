@@ -10,6 +10,10 @@
 - Moderation commands and message, mod logs!
 
 ## Vote Mito on Bot lists
+<div align="center">
 <a href="https://top.gg/bot/761469922563063818">
    <img src="https://top.gg/api/widget/761469922563063818.svg">
 </a>
+<br>
+<script src="https://discordbotlist.com/widget/index.js" async></script>
+<dbl-widget bot-id="bot-mito"></dbl-widget>
