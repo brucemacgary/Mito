@@ -10,8 +10,8 @@
 - Moderation commands and message, mod logs!
 
 ## Acknowledgement
-- Framework = discord-akairo
-- Language - Typescript
+- Library - [discord.js](https://discord.js.org/)
+- Framework - [Discord Akairo](https://discord-akairo.github.io/)
 
 ## Vote Mito on Bot lists
 <div align="center">
