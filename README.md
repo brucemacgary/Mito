@@ -15,4 +15,5 @@
    <img src="https://top.gg/api/widget/761469922563063818.svg">
 </a>
 <br>
+
 [![Discord Boats](https://discord.boats/api/widget/761469922563063818)](https://discord.boats/bot/761469922563063818/vote)
