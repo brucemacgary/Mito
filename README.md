@@ -19,6 +19,8 @@
    <img src="https://top.gg/api/widget/761469922563063818.svg">
 </a>
 <br>
+	
+[![Discord Bot List](https://discordbotlist.com/bots/761469922563063818/widget)](https://discordbotlist.com/bots/761469922563063818/upvote)
 
 [![Discord Boats](https://discord.boats/api/widget/761469922563063818)](https://discord.boats/bot/761469922563063818/vote)
 
