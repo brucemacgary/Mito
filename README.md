@@ -9,3 +9,5 @@
 - Moderation commands and message, mod logs!
 
 ## Vote Mito on Bot lists
+<a href="https://top.gg/bot/761469922563063818>
+<img src="https://top.gg/api/widget/761469922563063818.svg">
