@@ -11,9 +11,8 @@
 
 ## Vote Mito on Bot lists
 <div align="center">
-<a href="https://top.gg/bot/761469922563063818">
+<a href="https://top.gg/bot/761469922563063818/vote">
    <img src="https://top.gg/api/widget/761469922563063818.svg">
 </a>
 <br>
-<script src="https://discordbotlist.com/widget/index.js"></script>
-<dbl-widget bot-id="bot-mito"></dbl-widget>
+[![Discord Boats](https://discord.boats/api/widget/761469922563063818)](https://discord.boats/bot/761469922563063818/vote)
