@@ -9,6 +9,10 @@
 - Leveling System!
 - Moderation commands and message, mod logs!
 
+## Acknowledgement
+- Framework = discord-akairo
+- Language - Typescript
+
 ## Vote Mito on Bot lists
 <div align="center">
 <a href="https://top.gg/bot/761469922563063818/vote">
