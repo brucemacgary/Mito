@@ -22,5 +22,3 @@
 
 [![Discord Boats](https://discord.boats/api/widget/761469922563063818)](https://discord.boats/bot/761469922563063818/vote)
 
-<script src="https://discordbotlist.com/widget/index.js" async></script>
-<dbl-widget bot-id="bot-mito" centered></dbl-widget>
