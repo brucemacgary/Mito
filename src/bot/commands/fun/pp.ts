@@ -8,7 +8,7 @@ export default class extends Command {
 			aliases: ['pp', 'penis'],
 			category: 'fun',
 			description: {
-				content: 'Shows you your pp size',
+				content: 'Shows your pp size',
 				usage: 'pp @Aysuh',
 				example: ['ayush has a smol pp.']
 			},
