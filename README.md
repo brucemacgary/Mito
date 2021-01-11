@@ -30,6 +30,20 @@ You can contribute to this repository by the following steps:
 - Fork the repo, add your changes and issue a pull request!
 **Note** - You must test your changes before issuing a pull request.
 
+# Credits
+
+<div align="center">
+<table>
+  <tr>
+     <td align="center"><a href="https://github.com/BruceMacGary"><img src="https://images-ext-1.discordapp.net/external/8sGQRLXpbPVjBLqJy4WR20gnx7vKHsnR_qU2CTjFsIk/%3Fv%3D4/https/avatars1.githubusercontent.com/u/69719375" width="100px;" alt="Bruce"/><br /><sub><b>BruceMacGary</b></sub></a><br /><a href="https://github.com/BruceMacGary" title="Owner">👑</a></td>
+     <td align="center"><a href="https://github.com/itsayushch"><img src="https://images-ext-2.discordapp.net/external/j6KzoUsLtEaz938SxxwxqMd25pgmoTUxxlwSyaUtrEw/%3Fv%3D4/https/avatars3.githubusercontent.com/u/57065963" width="100px;" alt=""/><br /><sub><b>Ayush</b></sub></a><br /><a href="https://github.com/itsayushch" title="Developer">💻</a></td>
+     
+  </tr>
+  
+</table>
+</div>
+
+
 ## Vote Mito on Bot lists
 <div align="center">
 <a href="https://top.gg/bot/761469922563063818/vote">
