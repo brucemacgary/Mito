@@ -17,6 +17,19 @@
 - Licence - [MIT](https://github.com/TheMitobot/Mito/blob/main/LICENSE)
 - Hosting - [Azure](https://portal.azure.com)
 
+# Contributing
+First off, thanks for taking the time to contribute! You can contribute in:
+- Reporting a bug
+- Discussing the current state of the code
+- Submitting a fix
+- Proposing new features
+- Becoming a maintainer
+
+### How to Contribute?
+You can contribute to this repository by the following steps: 
+- Fork the repo, add your changes and issue a pull request!
+**Note** - You must test your changes before issuing a pull request.
+
 ## Vote Mito on Bot lists
 <div align="center">
 <a href="https://top.gg/bot/761469922563063818/vote">
