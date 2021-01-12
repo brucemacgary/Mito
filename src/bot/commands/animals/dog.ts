@@ -1,35 +1,32 @@
 import { Command } from 'discord-akairo';
+import { Message } from 'discord.js';
 import fetch from 'node-fetch';
-import { Message, MessageEmbed } from 'discord.js';
 
-class MemeCommand extends Command {
+export default class extends Command {
 
 	public constructor() {
-		super('dogs', {
-			aliases: ['dogs', 'dog'],
+		super('dog', {
+			aliases: ['dog'],
 			category: 'animals',
 			description: {
-				content: 'Sends random dog from the best sub-reddits!',
-				usage: '',
-				example: []
+				content: 'A random image and fact of dogs.',
+				example: '',
+				usage: []
 			}
 		});
 	}
 
 	public async exec(message: Message) {
-		const data = await fetch('https://www.reddit.com/r/dog/random/.json').then(res => res.json());
-		const children = data[0].data.children[0];
+		const data = await fetch('https://no-api-key.com/api/v1/animals/dog').then(d => d.json());
 
-		const embed: MessageEmbed = this.client.util.embed()
+		const embed = this.client.util.embed()
 			.setColor('ORANGE')
-			.setDescription(children.data.title)
-			.setURL(`https://reddit.com${children.data.permalink}`)
-			.setImage(children.data.url)
-			.setFooter(`👍 ${children.data.ups} | 💬 ${children.data.num_comments}`);
+			.setTitle(data.fact)
+			.setURL(data.image)
+			.setImage(data.image);
 
-		return message.util?.send(embed);
+		return message.util?.send({ embed });
+
 	}
 
 }
-
-export default MemeCommand;

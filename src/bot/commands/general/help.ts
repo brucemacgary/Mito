@@ -56,8 +56,8 @@ export default class HelpCommand extends Command {
 		const embed = this.client.util.embed()
 			.setAuthor('Mito - Help', this.client.user?.displayAvatarURL())
 			.setColor('#ffa053')
-			.setFooter('More commands soon! | Re-write 40%', message.author.displayAvatarURL({ dynamic: true }))
-			.setDescription(`Guild Prefix: \`${(this.handler.prefix as PrefixSupplier)(message) as string}\`\nTo get detailed info of a specific cmd, do \`${(this.handler.prefix as PrefixSupplier)(message) as string}help <command>\`\n<:MitoInvite:781892249859784745> **[Invite](https://discord.com/oauth2/authorize?client_id=761469922563063818&permissions=8&scope=bot)** **|** <:MitoSupport:781892074919297064> **[Support Server](https://discord.com/invite/mDF5QPG)** **|** <:MitoUpvote:781892694129508352> **[Upvote](https://top.gg/bot/761469922563063818/vote)**`);
+			.setFooter('More commands soon! | Re-write 60%', message.author.displayAvatarURL({ dynamic: true }))
+			.setDescription(`Guild Prefix: \`${(this.handler.prefix as PrefixSupplier)(message) as string}\`\nTo get detailed info of a specific cmd, do \`${(this.handler.prefix as PrefixSupplier)(message) as string}help <command>\`\n<:MitoInvite:781892249859784745> **[Invite](https://discord.com/oauth2/authorize?client_id=761469922563063818&permissions=8&scope=bot)** **|** <:MitoSupport:781892074919297064> **[Support Server](https://discord.com/invite/mDF5QPG)** **|** <:rich_presence:790128525533249566> **[Source Code](https://github.com/TheMitobot/Mito)** **|** <:MitoUpvote:781892694129508352> **[Upvote](https://top.gg/bot/761469922563063818/vote)**`);
 		for (const category of (message.channel as TextChannel).nsfw ? this.handler.categories.filter(f => f.id !== 'owner').values() : this.handler.categories.filter(f => f.id !== 'owner' && f.id !== 'nsfw' && f.id !== 'default').values()) {
 			embed.addField(
 				`❯ ${category.id.replace(/(\b\w)/gi, lc => lc.toUpperCase())}`,

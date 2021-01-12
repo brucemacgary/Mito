@@ -10,6 +10,7 @@ export default class ToggleCommand extends Command {
 			description: {
 				content: stripIndents`Available keys:
 					• logs \`<webhook id>\`
+					• suggestions \`[channel]\`
 					• levelling
                 Required: \`<>\` | Optional: \`[]\`
                 `,
@@ -26,7 +27,8 @@ export default class ToggleCommand extends Command {
 		const method = yield {
 			type: [
 				['logs', 'log'],
-				['levelling', 'ranking', 'level']
+				['levelling', 'ranking', 'level'],
+				['suggestions', 'suggest']
 			],
 			otherwise: async (msg: Message): Promise<string> => {
 				const prefix = await (this.handler.prefix as PrefixSupplier)(msg);

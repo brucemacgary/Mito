@@ -5,11 +5,11 @@ import fetch from 'node-fetch';
 export default class extends Command {
 
 	public constructor() {
-		super('cat', {
-			aliases: ['cat'],
+		super('panda', {
+			aliases: ['panda'],
 			category: 'animals',
 			description: {
-				content: 'A random image and fact of cat.',
+				content: 'A random image and fact of panda.',
 				example: '',
 				usage: []
 			}
@@ -17,7 +17,7 @@ export default class extends Command {
 	}
 
 	public async exec(message: Message) {
-		const data = await fetch('https://no-api-key.com/api/v1/animals/cat').then(d => d.json());
+		const data = await fetch('https://no-api-key.com/api/v1/animals/panda').then(d => d.json());
 
 		const embed = this.client.util.embed()
 			.setColor('ORANGE')
