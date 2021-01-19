@@ -16,13 +16,13 @@ export default class extends Command {
 	}
 
 	public async exec(message: Message) {
-        const embed = this.client.util.embed()
-        .setAuthor('Mito - Donate & Support', this.client.user?.displayAvatarURL())
-		.setColor('#ffa053')
-        .setDescription(`Donate us on different platforms to get premium access of the bot!`)
-        .addField('Patreon', `Donate us on [Patreon](https://patreon.com/mitobot) Monthly!`)
-        .setFooter(`Tysm For Donating me! ${message.author.tag}`, message.author.displayAvatarURL({ dynamic: true }))
-        .setTimestamp()
+		const embed = this.client.util.embed()
+			.setAuthor('Mito - Donate & Support', this.client.user?.displayAvatarURL())
+			.setColor('#ffa053')
+			.setDescription('Donate us on different platforms to get premium access of the bot!')
+			.addField('Patreon', 'Donate us on [Patreon](https://patreon.com/mitobot) Monthly!')
+			.setFooter(`Tysm For Donating me! ${message.author.tag}`, message.author.displayAvatarURL({ dynamic: true }))
+			.setTimestamp();
 		return message.util!.send(embed);
 	}
 

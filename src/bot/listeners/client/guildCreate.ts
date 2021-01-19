@@ -17,13 +17,12 @@ export default class extends Listener {
 		const owner = await this.client.users.fetch(guild.ownerID);
 
 		const embed = this.client.util.embed()
-			.setColor(0xffa053)
-			.setTitle('Joined a new server')
-			.setDescription(stripIndents`
-				Guild: \`${guild.name} (${guild.id})\`
-				Owner: \`${owner.tag} (${owner.id})\` 
-				Members: \`${guild.memberCount}\`
-			`);
+			.setColor('GREEN')
+			.setAuthor('Joined a new server', 'https://cdn.discordapp.com/emojis/738078326702211114.png?v=1')
+			.addField('Server', `**Name:** ${guild.name}\n**ID:** ${guild.id}`, true)
+			.addField('Owner', `**Name:** ${owner.tag}\n**ID:** ${owner.id}`, true)
+			.addField('Members', `${guild.memberCount}`, true)
+			.setFooter(`I am now in ${this.client.guilds.cache.size} servers!`, 'https://cdn.discordapp.com/emojis/738077962733092874.png?v=1');
 
 		return channel.send({ embed });
 

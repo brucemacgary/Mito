@@ -5,7 +5,7 @@ import { TextChannel, Message } from 'discord.js';
 class Suggestions extends Command {
 
 	public constructor() {
-		super('suggestions', {
+		super('toggle-suggestions', {
 			description: {
 				content: ''
 			}
@@ -40,7 +40,7 @@ class Suggestions extends Command {
 
 		await this.client.settings.set(message.guild?.id!, 'suggestions', channel.id);
 		// eslint-disable-next-line @typescript-eslint/no-base-to-string
-		return message.util?.send(`Activated logs in ${channel}`);
+		return message.util?.send(`Activated suggestions in ${channel}`);
 	}
 
 }

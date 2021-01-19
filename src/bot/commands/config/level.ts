@@ -5,7 +5,7 @@ import { Message } from 'discord.js';
 class LevelCommand extends Command {
 
 	public constructor() {
-		super('levelling', {
+		super('toggle-levelling', {
 			description: {
 				content: 'Enables or disables ranking system'
 			}
@@ -18,11 +18,15 @@ class LevelCommand extends Command {
 		switch (level) {
 			case false:
 				void this.client.settings.set(message.guild?.id!, 'level', true);
-				void message.util?.send('<:MitoTick:769434647590731786> Levelling has been enabled');
+				void message.util?.send({
+					embed: { description: '<:MitoEnabled:786446115381837889> Levelling has been enabled', color: '#43b582' }
+				});
 				break;
 			case true:
 				void this.client.settings.set(message.guild?.id!, 'level', false);
-				void message.util?.send('<:MitoStop:781826615318806538> Levelling has been disabled');
+				void message.util?.send({
+					embed: { description: '<:MitoDisable:786446115511336990> Levelling has been disabled', color: '#888888' }
+				});
 				break;
 			default:
 				break;

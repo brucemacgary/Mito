@@ -18,15 +18,15 @@ export default class ResumeCommand extends Command {
 	public async exec(message: Message) {
 		if (!message.member?.voice?.channel) {
 			return message.util!.reply({
-				embed: { description: '<:MItoCross:769434647234347009> You need to be in a voice channel to use this command.', color: 'RED' } 
+				embed: { description: '<:MItoCross:769434647234347009> You need to be in a voice channel to use this command.', color: 'RED' }
 			});
 		}
 		const queue = this.client.music.queues.get(message.guild!.id);
 		await queue.player.pause(false);
 
 		return message.util!.send({
-				embed: { description: '<:MitoPlay:781827957005090856> Resumed the queue.', color: '#F04438' } 
-			});
+			embed: { description: '<:MitoPlay:781827957005090856> Resumed the queue.', color: '#F04438' }
+		});
 	}
 
 }

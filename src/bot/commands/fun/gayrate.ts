@@ -23,15 +23,15 @@ export default class extends Command {
 	}
 
 	public async exec(message: Message, { user }: { user: User }) {
-        const min = Math.ceil(1);
-        const max = Math.floor(100);
-        const num = Math.floor(Math.random() * (max - min + 1)) + min;
-        const embed = new MessageEmbed()
-        .setTitle("Gayr8 machine")
-        .setDescription(`${message.mentions.users.first()} is ${num}% gay 🏳️‍🌈`)
-        .setColor("ORANGE")
-        .setFooter(message.author.username)
-        .setTimestamp();
+		const min = Math.ceil(1);
+		const max = Math.floor(100);
+		const num = Math.floor(Math.random() * (max - min + 1)) + min;
+		const embed = new MessageEmbed()
+			.setTitle('Gayr8 machine')
+			.setDescription(`${user}} is ${num}% gay 🏳️‍🌈`)
+			.setColor('ORANGE')
+			.setFooter(message.author.username)
+			.setTimestamp();
 
 		return message.util?.send(embed);
 

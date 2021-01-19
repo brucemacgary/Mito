@@ -11,8 +11,8 @@ export default class ReadyListener extends Listener {
 	}
 
 	public exec() {
-		this.client.logger.info(`Ready ${this.client.user!.tag}`, { label: 'READY' })
-        this.client.user?.setPresence({ activity: { name: 'm!help', type: "LISTENING" }, status: "online"});
+		this.client.logger.info(`Ready ${this.client.user!.tag}`, { label: 'READY' });
+		this.client.user?.setPresence({ activity: { name: 'm!help', type: 'LISTENING' }, status: 'online' });
 	}
 
 }

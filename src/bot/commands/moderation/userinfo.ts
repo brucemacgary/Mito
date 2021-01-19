@@ -42,8 +42,8 @@ export default class UserInfoCommand extends Command {
 		const devices = Object.keys(user.presence.clientStatus ?? {})
 			.map(key => (DEVICES[key]));
 
-		if (member?.premiumSince){
-			embed.addField(`Boosting Server Since`, `${moment.utc(member.premiumSince).format('MMMM D, YYYY, kk:mm:ss')}`)
+		if (member?.premiumSince) {
+			embed.addField('Boosting Server Since', `${moment.utc(member.premiumSince).format('MMMM D, YYYY, kk:mm:ss')}`);
 		}
 		if (devices.length) embed.addField('Device', `${devices.join(' ')}\u200b`);
 

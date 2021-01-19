@@ -18,8 +18,11 @@
   "homepage": "https://github.com/BruceMacGary/hehe_bot#readme",
   "dependencies": {
     "@types/common-tags": "^1.8.0",
+    "@types/moment": "^2.13.0",
+    "@types/moment-duration-format": "^2.2.2",
     "@types/mongodb": "^3.5.33",
     "@types/node": "^14.14.10",
+    "@types/node-emoji": "^1.8.1",
     "@types/node-fetch": "^2.5.7",
     "amethyste-api": "^1.1.4",
     "chalk": "^4.1.0",
@@ -32,6 +35,7 @@
     "moment": "^2.29.1",
     "moment-duration-format": "^2.3.2",
     "mongodb": "^3.6.3",
+    "node-emoji": "^1.10.0",
     "node-fetch": "^2.6.1",
     "typescript": "^4.1.2"
   },
@@ -41,7 +45,6 @@
   "keywords": [],
   "devDependencies": {
     "@skyra/eslint-config": "^5.3.3",
-    "@types/common-tags": "^1.8.0",
     "@typescript-eslint/eslint-plugin": "^4.9.0",
     "@typescript-eslint/parser": "^4.9.0",
     "eslint": "^7.14.0",

@@ -8,7 +8,7 @@ class LeaderBoard extends Command {
 	public constructor() {
 		super('leaderboard', {
 			aliases: ['leaderboard', 'lb'],
-			category: 'levelling',
+			category: 'leveling',
 			description: {
 				content: 'leaderboard'
 			}
@@ -34,7 +34,7 @@ class LeaderBoard extends Command {
 			str += `\`\u200e  ${String(++rank).padStart(2, '0')}  \u200e\` \`\u200e   ${user.username.substring(0, 20).padEnd(21, ' ')}\u200e\` \`\u200e${String(currentLevel).padStart(3, ' ')}  \u200e\`\n`;
 		}
 		const embed = this.client.util.embed()
-			.setColor(11642864)
+			.setColor('#ffa053')
 			.setAuthor(`Leaderboard for ${message.guild!.name}`, (message.guild as Guild).iconURL({ dynamic: true })!)
 			.setDescription(str)
 			.setFooter(paginated.page > 1 ? `Page ${paginated.page}` : '');

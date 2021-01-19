@@ -1,14 +1,14 @@
 /* eslint-disable @typescript-eslint/no-non-null-asserted-optional-chain */
 import { Command, PrefixSupplier } from 'discord-akairo';
-import progressbar from '../../util/progressbar';
-import { GuildMember, Message } from 'discord.js';
+import { GuildMember, Message, MessageAttachment } from 'discord.js';
+import fetch from 'node-fetch';
 
 class RankCommand extends Command {
 
 	public constructor() {
 		super('rank', {
 			aliases: ['rank'],
-			category: 'levelling',
+			category: 'leveling',
 			description: {
 				content: 'rank command'
 			},
@@ -51,20 +51,44 @@ class RankCommand extends Command {
 
 		const rank = leaderboard.findIndex(item => item.user === user.id) + 1;
 
-		const embed = this.client.util.embed()
-			.setColor('#ffa053')
 
-			.setAuthor(user.tag, user.displayAvatarURL({ dynamic: true }))
-			.setThumbnail(user.displayAvatarURL({ dynamic: true }))
-			.setDescription(`
-				<:MitoRank:782611836243542066> **|** **Rank:** \`#${rank}\`
-				<:MitoLevel:782612642794962976> **|** **Level:** \`${currentLevel}\`
-				<:MitoGrowth:782613256095268874> **|** **Exp:** \`${currentLevelExp} / ${levelExp}\`
-				<:MitoTarget:782615490438758410> **|** **Total Exp:** \`${userData.exp}\`
-				${progressbar(currentLevelExp, levelExp, 15)}
-			`);
+		const res = await fetch('https://level-api.herokuapp.com/', {
+			method: 'POST',
+			body: JSON.stringify({
+				avatar: user.displayAvatarURL({ format: 'png', size: 2048 }),
+				exp: currentLevelExp,
+				level: currentLevel,
+				nextLevelXp: levelExp,
+				rank,
+				presence: user.presence.status,
+				username: user.username,
+				displayHexColor: member.displayHexColor,
+				discriminator: user.discriminator
+			}),
+			headers: {
+				'Content-Type': 'application/json'
+			}
+		});
 
-		return message.util?.send({ embed });
+		const buffer = await res.buffer();
+
+		const attachment = new MessageAttachment(buffer, 'rank.png');
+		return message.util?.send(attachment);
+
+		// const embed = this.client.util.embed()
+		// 	.setColor('#ffa053')
+
+		// 	.setAuthor(user.tag, user.displayAvatarURL({ dynamic: true }))
+		// 	.setThumbnail(user.displayAvatarURL({ dynamic: true }))
+		// 	.setDescription(`
+		// 		<:MitoRank:782611836243542066> **|** **Rank:** \`#${rank}\`
+		// 		<:MitoLevel:782612642794962976> **|** **Level:** \`${currentLevel}\`
+		// 		<:MitoGrowth:782613256095268874> **|** **Exp:** \`${currentLevelExp} / ${levelExp}\`
+		// 		<:MitoTarget:782615490438758410> **|** **Total Exp:** \`${userData.exp}\`
+		// 		${progressbar(currentLevelExp, levelExp, 15)}
+		// 	`);
+
+		// return message.util?.send({ embed });
 	}
 
 }

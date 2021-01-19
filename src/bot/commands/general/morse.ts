@@ -16,6 +16,7 @@ export default class extends Command {
 				{
 					id: 'text',
 					type: 'uppercase',
+					match: 'content',
 					prompt: {
 						start: 'Enter a text or a morse code to be encoded or decoded.'
 					}
@@ -46,7 +47,7 @@ export default class extends Command {
 			}
 			text = text.join(' ');
 		}
-		return message.util?.send(`\`\`\`${text}\`\`\``);
+		return message.util?.send(text, { code: true });
 	}
 
 }

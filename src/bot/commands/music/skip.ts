@@ -44,7 +44,7 @@ export default class SkipCommand extends Command {
 			await queue.stop();
 			return message.util?.send({
 				embed: { description: '<:MitoSkip:781827050380984341> Skipped the current song.', color: '#F04438' }
-		});
+			});
 		}
 
 		const song = await this.decode(queues[num - 1]);

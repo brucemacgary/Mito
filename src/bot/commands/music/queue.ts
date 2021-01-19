@@ -34,19 +34,21 @@ export default class QueueCommand extends Command {
 		const queue = this.client.music.queues.get(message.guild!.id);
 		const current = await queue.current();
 		const tracks = [(current || { track: null }).track].concat(await queue.tracks()).filter(track => track);
-		if (!tracks.length) return message.util!.send({
-			embed: { description: '<:MItoCross:769434647234347009> Got nothing in queue!', color: 'RED' }
-		});
+		if (!tracks.length) {
+			return message.util!.send({
+				embed: { description: '<:MItoCross:769434647234347009> Got nothing in queue!', color: 'RED' }
+			});
+		}
 		const decoded = await this.client.music.decode(tracks as any[]);
 		const totalLength = decoded.reduce((prev, song) => prev + song.info.length, 0);
 		const paginated = paginate(decoded.slice(1), page);
 		let index = (paginated.page - 1) * 10;
 		let halo = this.client.music.queues.get(message.guild!.id).tracks().length;
 		const embed = new MessageEmbed()
-				.setColor('#ffa053')
-				.setTitle('Music Queue')
-				.addField('Now Playing', `**[${decoded[0].info.title}](${decoded[0].info.uri})**\`(${timeString(current?.position ?? 0)} / ${timeString(decoded[0].info.length)})\``, true)
-				.setDescription(`There are currently \`${halo}\` songs in the queue with a total duration of \`${timeString(totalLength)}\`\n**Song queue${paginated.page > 1 ? `, page ${paginated.page}` : ''}:**
+			.setColor('#ffa053')
+			.setTitle('Music Queue')
+			.addField('Now Playing', `**[${decoded[0].info.title}](${decoded[0].info.uri})**\`(${timeString(current?.position ?? 0)} / ${timeString(decoded[0].info.length)})\``, true)
+			.setDescription(`There are currently \`${halo}\` songs in the queue with a total duration of \`${timeString(totalLength)}\`\n**Song queue${paginated.page > 1 ? `, page ${paginated.page}` : ''}:**
 				${
 	paginated.items.length
 		? paginated.items

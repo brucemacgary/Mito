@@ -29,7 +29,7 @@ export default class SeekCommand extends Command {
 	public async exec(message: Message, { position }: { position: string }) {
 		if (!message.member?.voice.channel) {
 			return message.util?.send({
-				embed: { description: 'You must be connected to a voice channel to use that command!', color: 'RED' }
+				embed: { description: '<:MItoCross:769434647234347009> You must be connected to a voice channel to use that command!', color: 'RED' }
 			});
 		}
 		const queue = this.client.music.queues.get((message.guild as Guild).id);
@@ -57,12 +57,14 @@ export default class SeekCommand extends Command {
 		const decoded = await this.client.music.decode(current.track);
 		const duration = Number(decoded.length);
 		const embed = this.client.util.embed()
-		.setTitle('')
+
 			.setColor('#ffa053')
 			.setAuthor('Seeked')
+			.setTitle(`${decoded.title}`)
+			.setURL(`${decoded.uri}`)
 			.setThumbnail(`https://i.ytimg.com/vi/${decoded.identifier}/hqdefault.jpg`)
 			.setDescription([
-				`[${decoded.title}](${decoded.uri}) \`[${timeString(point)}/${decoded.isStream ? '∞' : timeString(decoded.length)}]\``,
+				`(${timeString(point)}/${decoded.isStream ? '∞' : timeString(decoded.length)})`,
 				'\n',
 				`${progressbar(point, duration, 15)}`
 			]);

@@ -1,7 +1,7 @@
 // https://complimentr.com/api
 import { Command } from 'discord-akairo';
 import fetch from 'node-fetch';
-import { Message, MessageEmbed } from 'discord.js';
+import { Message } from 'discord.js';
 
 class MemeCommand extends Command {
 
@@ -19,7 +19,7 @@ class MemeCommand extends Command {
 
 	public async exec(message: Message) {
 		const { compliment } = await fetch('https://complimentr.com/api').then(res => res.json());
-		
+
 		return message.util?.send(compliment);
 	}
 

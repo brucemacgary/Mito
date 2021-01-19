@@ -35,7 +35,7 @@ export default class ReorderCommand extends Command {
 		super('reorder', {
 			aliases: ['reorder', '↕'],
 			description: {
-				content: `Reorders the current queue.\nA number means that the song at that number currently will be moved to that position.\nA '-' between two numbers means to move all the songs, starting from first number to the second number.\nA '\\*' means to spread the remaining songs out (multiple '\\*' will split it evenly).`,
+				content: 'Reorders the current queue.\nA number means that the song at that number currently will be moved to that position.\nA \'-\' between two numbers means to move all the songs, starting from first number to the second number.\nA \'\\*\' means to spread the remaining songs out (multiple \'\\*\' will split it evenly).',
 				usage: '<ordering>',
 				examples: ['1-3 7 *', '1 2 3 *', '10-7 * 1 2 3 3 * 10-7']
 			},

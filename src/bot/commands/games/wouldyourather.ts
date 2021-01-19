@@ -1,6 +1,6 @@
 import { Command } from 'discord-akairo';
 import fetch from 'node-fetch';
-import { Message, MessageEmbed } from 'discord.js';
+import { Message } from 'discord.js';
 
 class WouldCommand extends Command {
 

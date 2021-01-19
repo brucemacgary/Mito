@@ -5,7 +5,7 @@ import { Message } from 'discord.js';
 class MessageLog extends Command {
 
 	public constructor() {
-		super('logs', {
+		super('toggle-logs', {
 			description: {
 				content: 'Enables or disables logs'
 			}

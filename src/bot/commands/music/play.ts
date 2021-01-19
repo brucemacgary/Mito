@@ -12,7 +12,7 @@ export default class PlayCommand extends Command {
 			description: {
 				content: 'Play a song from literally any source you can think of.',
 				usage: '<link/search>',
-				examples: ['justin bieber']
+				examples: ['bye pewdiepie carryminati']
 			},
 			category: 'music',
 			channel: 'guild',
@@ -70,12 +70,12 @@ export default class PlayCommand extends Command {
 			else await queue.add(res.tracks[0].track);
 			msg = this.client.util.embed()
 		    .setColor('#ffa053')
-				
+
 				.setThumbnail(`https://i.ytimg.com/vi/${res.tracks[0].info.identifier}/hqdefault.jpg`)
 				.setTitle(`**${res.tracks[0].info.title}**`)
 				.setURL(`${res.tracks[0].info.uri}`)
-				.addField('Length', `<:MitoTimer:786446116849582091> \`(${res.tracks[0].info.isStream ? '∞' : timeString(res.tracks[0].info.length)})\``, true )
-				.addField('Uploader', `<:tag:790130510911242251> \`${res.tracks[0].info.author}\``, true)
+				.addField('Length', `(${res.tracks[0].info.isStream ? '∞' : timeString(res.tracks[0].info.length)})`, true)
+				.addField('Uploader', `${res.tracks[0].info.author}`, true)
 				.setTimestamp()
 				.setFooter(`Requested by ${message.author.tag}`, message.author.displayAvatarURL({ dynamic: true }));
 		} else if (res.loadType === 'PLAYLIST_LOADED') {
